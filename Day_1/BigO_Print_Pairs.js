@@ -7,3 +7,5 @@ const printAllPairs = (n) => {
 };
 
 printAllPairs(10);
+
+// O(n^2) - runtime roughly grows at the rate of n^2
