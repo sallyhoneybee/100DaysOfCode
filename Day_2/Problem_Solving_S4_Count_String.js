@@ -1,7 +1,7 @@
 // ===========================================================================================
 // WRITE A FUNCTION WHICH TAKES IN A STRING AND RETURNS COUNTS OF EACH CHARACTER IN THE STRING
 // ===========================================================================================
-// Step 3 - Break it down
+// Step 4 - Solve/simplify
 
 //  clarifications - not case sensitive, only alphanumeric, no symbols, no spaces
 
