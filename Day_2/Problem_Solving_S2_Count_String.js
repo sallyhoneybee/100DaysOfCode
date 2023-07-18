@@ -1,6 +1,7 @@
 // ===========================================================================================
 // WRITE A FUNCTION WHICH TAKES IN A STRING AND RETURNS COUNTS OF EACH CHARACTER IN THE STRING
 // ===========================================================================================
+// Step 2 - Concrete Examples
 
 // 1. Start with simple examples
 charCount("aaaa"); // {a: 4}

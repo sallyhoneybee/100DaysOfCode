@@ -1,6 +1,7 @@
 // ==============================================================
 // WRITE A FUNCTION WHICH TAKES TWO NUMBERS AND RETURNS THEIR SUM
 // ==============================================================
+// Step 1 - Understanding the problem
 
 // 1. Can I restate the problem in my own words?
 // "Add two numbers together"
