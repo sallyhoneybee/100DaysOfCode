@@ -53,7 +53,7 @@ const validAnagram = (word1, word2) => {
       return false;
     }
 
-    if (!(frequencyCounter1[key] === frequencyCounter2[key])) {
+    if (frequencyCounter1[key] !== frequencyCounter2[key]) {
       return false;
     }
   }
