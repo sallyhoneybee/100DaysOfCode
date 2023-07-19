@@ -14,12 +14,12 @@ const same = (arr1, arr2) => {
 
   // count the occurance of each value in the first array with a loop
   for (let value of arr1) {
-    frequencyCounter1[value] = ++frequencyCounter1 || 1;
+    frequencyCounter1[value] = ++frequencyCounter1[value] || 1;
   }
 
   // count the occurance of each value in the second array with a loop
   for (let value of arr1) {
-    frequencyCounter2[value] = ++frequencyCounter2 || 1;
+    frequencyCounter2[value] = ++frequencyCounter2[value] || 1;
   }
 
   // compare if the value in frequencyCounter1 is an exponent of frequencyCounter2 by matching its keys
