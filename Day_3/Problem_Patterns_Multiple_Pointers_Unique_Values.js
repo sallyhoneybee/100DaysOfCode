@@ -5,6 +5,10 @@ const countUniqueValues = (arr) => {
   let i = 0;
   let j = 1;
 
+  if (arr.length === 0) {
+    return 0;
+  }
+
   while (j < arr.length) {
     if (arr[i] === arr[j]) {
       j++;
@@ -16,6 +20,7 @@ const countUniqueValues = (arr) => {
   }
 
   return i > 0 ? i + 1 : 0;
+  // return i > 0 ? i + 1 : 0; instead of this, think about the time when i = 0 , and thats only when the array is empty. this ternary operator will fail when array has length of 1 because i will still be 0.
 };
 
 console.log(countUniqueValues([-1, -1, 1, 1, 2, 3, 4, 5, 5]));
