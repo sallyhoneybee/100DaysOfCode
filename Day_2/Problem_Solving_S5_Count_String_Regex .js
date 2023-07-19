@@ -35,7 +35,7 @@ const charCount = (str) => {
       results[char] = ++results[char] || 1;
     }
   }
-  return console.log(results);
+  return results;
 };
 
-charCount("hello HI!123");
+console.log(charCount("hello HI!123"));
