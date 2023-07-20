@@ -41,7 +41,7 @@ const areThereDuplicates = (...args) => {
   args = args.sort();
   let i = 0;
 
-  for (j = 1; j < args.length; j++) {
+  for (let j = 1; j < args.length; j++) {
     if (args[i] === args[j]) {
       return true;
     }
