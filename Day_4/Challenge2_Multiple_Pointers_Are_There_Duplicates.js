@@ -30,6 +30,7 @@
 /** 3. Break it down
  * - make sure that there are 2 or more arguments
  * - put the arguments into an array (no need args is already an array)
+ * - sort the array
  * - define i = 0 as the first pointer
  * - loop through the array of arguments comparing the i index vs the j index
  * - return true at the first match
@@ -37,14 +38,18 @@
 
 const areThereDuplicates = (...args) => {
   if (args.length < 2) return null;
+  args = args.sort();
   let i = 0;
 
   for (j = 1; j < args.length; j++) {
     if (args[i] === args[j]) {
       return true;
     }
+    i++;
   }
   return false;
 };
 
-console.log(areThereDuplicates(false, false));
+console.log(areThereDuplicates(1, 2, 2));
+console.log(areThereDuplicates(1, 3, 4, 5, 5, 2, 2));
+console.log(areThereDuplicates(2, "hello", "hi", "4", 2));
