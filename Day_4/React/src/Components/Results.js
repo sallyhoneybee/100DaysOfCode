@@ -1,3 +1,5 @@
+import "./Results.css";
+
 const Results = (props) => {
   if (!props.results || props.results.length === 0) {
     return <p>No results to display.</p>;

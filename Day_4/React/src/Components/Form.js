@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 
+import "./Form.css";
+
 const Form = (props) => {
   const [inputValue, setInputValue] = useState({
     currentSavings: "",
