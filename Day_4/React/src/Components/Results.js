@@ -1,6 +1,4 @@
 const Results = (props) => {
-  console.log(props.results);
-
   if (!props.results || props.results.length === 0) {
     return <p>No results to display.</p>;
   }
