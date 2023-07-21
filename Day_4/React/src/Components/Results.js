@@ -1,4 +1,10 @@
-const Results = () => {
+const Results = (props) => {
+  console.log(props.results);
+
+  if (!props.results || props.results.length === 0) {
+    return <p>No results to display.</p>;
+  }
+
   return (
     <table className="result">
       <thead>
@@ -11,13 +17,20 @@ const Results = () => {
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>YEAR NUMBER</td>
+        {props.results.map((data, index) => (
+          <tr key={index}>
+            <td>{data.year}</td>
+            <td>{data.savingsEndOfYear}</td>
+            <td>{data.yearlyInterest}</td>
+            <td>{data.totalInterest}</td>
+            <td>{data.investedContribution}</td>
+          </tr>
+        ))}
+        {/* <td>YEAR NUMBER</td>
           <td>TOTAL SAVINGS END OF YEAR</td>
           <td>INTEREST GAINED IN YEAR</td>
           <td>TOTAL INTEREST GAINED</td>
-          <td>TOTAL INVESTED CAPITAL</td>
-        </tr>
+          <td>TOTAL INVESTED CAPITAL</td> */}
       </tbody>
     </table>
   );
