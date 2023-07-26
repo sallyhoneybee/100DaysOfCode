@@ -55,29 +55,28 @@ const Login = (props) => {
   //   };
   // }, []);
 
-  // useEffect(() => {
-  //   console.log("in use effect");
-  //   const identifier = setTimeout(() => {
-  //     setFormIsValid(enteredPassword.length > 6 && enteredEmail.includes("@"));
-  //   }, 500);
+  useEffect(() => {
+    const identifier = setTimeout(() => {
+      setFormIsValid(passwordState.isValid && emailState.isValid);
+    }, 500);
 
-  //   // cleanup function
-  //   return () => {
-  //     clearTimeout(identifier);
-  //   };
-  // }, [enteredPassword, enteredEmail]);
+    // cleanup function
+    return () => {
+      clearTimeout(identifier);
+    };
+  }, [passwordState, emailState]);
 
   const emailChangeHandler = (event) => {
     // pass an action
     dispatchEmail({ type: "USER_INPUT", val: event.target.value });
 
-    setFormIsValid(passwordState.isValid && emailState.isValid);
+    // setFormIsValid(passwordState.isValid && emailState.isValid);
   };
 
   const passwordChangeHandler = (event) => {
     dispatchPassword({ type: "PASSWORD_INPUT", val: event.target.value });
 
-    setFormIsValid(passwordState.isValid && emailState.isValid);
+    // setFormIsValid(passwordState.isValid && emailState.isValid);
   };
 
   const validateEmailHandler = () => {
