@@ -55,16 +55,19 @@ const Login = (props) => {
   //   };
   // }, []);
 
+  const { isValid: emailIsValid } = emailState;
+  const { isValid: passwordIsValid } = passwordState;
+
   useEffect(() => {
     const identifier = setTimeout(() => {
-      setFormIsValid(passwordState.isValid && emailState.isValid);
+      setFormIsValid(emailIsValid && passwordIsValid);
     }, 500);
 
     // cleanup function
     return () => {
       clearTimeout(identifier);
     };
-  }, [passwordState, emailState]);
+  }, [emailIsValid, passwordIsValid]);
 
   const emailChangeHandler = (event) => {
     // pass an action
