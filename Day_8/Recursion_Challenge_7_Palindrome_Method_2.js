@@ -3,28 +3,10 @@
 
 const isPalindrome = (str) => {
   // start from each end, see if the ends match but i have to include more logic to check if the string is odd ro even before i can apply middle like that
-  let middle = Math.round(str.length % 2);
-
-  let i = 0;
-  let j = str.length - 1;
-  palindrome = false;
-
-  const palindromeHelper = (helperStr) => {
-    if (i === middle) return;
-
-    if (helperStr[i] !== helperStr[j]) return (palindrome = false);
-
-    //  either add j and i or slice helperStr
-    i++;
-    j--;
-    palindromeHelper(helperStr);
-
-    palindrome = true;
-  };
-
-  palindromeHelper(str);
-
-  return palindrome;
+  if (str.length === 1) return true;
+  if (str.length === 2) return str[0] === str[1];
+  if (str[0] === str.slice(-1)) return isPalindrome(str.slice(1, -1));
+  return false;
 };
 
 console.log(isPalindrome("taccat"));
